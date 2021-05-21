@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@components/*": ["components/*"],
+      "@models/*": ["models/*"],
+      "@src/*": ["src/*"],
+      "@config/*": ["src/configs/*"],
+      "@middlewares/*": ["middlewares/*"],
+      "@styles/*": ["styles/*"],
+      "@consts/*": ["const/*"],
+      "@db/*":["db-services/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
