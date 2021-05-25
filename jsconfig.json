@@ -5,7 +5,7 @@
       "@components/*": ["components/*"],
       "@models/*": ["models/*"],
       "@src/*": ["src/*"],
-      "@config/*": ["src/configs/*"],
+      "@config/*": ["config/*"],
       "@middlewares/*": ["middlewares/*"],
       "@styles/*": ["styles/*"],
       "@consts/*": ["const/*"],

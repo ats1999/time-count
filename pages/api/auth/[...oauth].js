@@ -1,6 +1,5 @@
 import axios from "axios";
-//import createDev from "@src/handlers/Dev/create";
-import createDev from "../../../src/handlers/dev/create";
+import createDev  from "@db/user/createUser";
 const jwt = require('jsonwebtoken');
 const JWT_KEY = process.env.JWT_KEY;
 const { setCookie } = require('nookies');
@@ -13,7 +12,7 @@ const oAuth = async(req,res)=>{
         Accept:"application/json"
       }
     })
-    console.log(tokenReq.data)
+
     token = tokenReq.data.access_token;
     // token may be undefined
     if(!token) return res.status(500).json({
@@ -69,7 +68,6 @@ const oAuth = async(req,res)=>{
       permissions:dev.permissions,
       pic:dev.pic
     }
-    console.log(tokenDev)
     jwt.sign(tokenDev,JWT_KEY,{expiresIn:"10d"},(err,token)=>{
       if(err){
           console.log(err)
